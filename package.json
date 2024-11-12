@@ -1,0 +1,30 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "egg-bin dev --typescript",
+    "debug": "egg-bin debug --typescript",
+    "test": "egg-bin test --typescript",
+    "tsc": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "egg": "^3.28.0"
+  },
+  "devDependencies": {
+    "@types/egg": "^1.5.3",
+    "@types/koa": "^2.15.0",
+    "@types/node": "^22.9.0",
+    "@typescript-eslint/eslint-plugin": "^8.14.0",
+    "@typescript-eslint/parser": "^8.14.0",
+    "egg-bin": "^6.10.0",
+    "egg-ts-helper": "^2.1.0",
+    "eslint": "^9.14.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.6.3"
+  }
+}
