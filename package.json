@@ -16,6 +16,8 @@
     "egg": "^3.28.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
     "@types/egg": "^1.5.3",
     "@types/koa": "^2.15.0",
     "@types/node": "^22.9.0",
@@ -24,7 +26,16 @@
     "egg-bin": "^6.10.0",
     "egg-ts-helper": "^2.1.0",
     "eslint": "^9.14.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
     "tslib": "^2.8.1",
     "typescript": "^5.6.3"
+  },
+  "lint-staged": {
+    "*.{js,ts,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
