@@ -8,6 +8,9 @@ dependencies:
   egg:
     specifier: ^3.28.0
     version: 3.28.0
+  egg-cors:
+    specifier: ^3.0.1
+    version: 3.0.1
   egg-view-nunjucks:
     specifier: ^2.3.0
     version: 2.3.0
@@ -495,6 +498,13 @@ packages:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
     dev: true
+
+  /@koa/cors@5.0.0:
+    resolution: {integrity: sha512-x/iUDjcS90W69PryLDIMgFyV21YLTnG9zOpPXS7Bkt2b8AsY3zZsIpOLBkYr9fBcF3HbkKaER5hOBZLfpLgYNw==}
+    engines: {node: '>= 14.0.0'}
+    dependencies:
+      vary: 1.1.2
+    dev: false
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -1712,6 +1722,13 @@ packages:
       utility: 1.18.0
     transitivePeerDependencies:
       - supports-color
+
+  /egg-cors@3.0.1:
+    resolution: {integrity: sha512-p4TpA2C4CP8iqzUMixjag+jLXFAhQhGlPWSRreMlT9kf/jQzwspALYae0V0EBtkTJtW1eB3lXHKGoPsuf5+0Ag==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@koa/cors': 5.0.0
+    dev: false
 
   /egg-development@3.0.0:
     resolution: {integrity: sha512-xgfLqAfPUiMOoTQjuMjokGMMOUw6c1WRAnDja3Fr+O3aMn7Us1Tm+NkZAQHVkuRO8OSVnWJ7fJBTN+HVeQxNkg==}

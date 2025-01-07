@@ -11,4 +11,5 @@ module.exports = (app: Application) => {
   router.get('/', controller.home.index)
   router.get('/news', controller.news.list)
   router.get('/news/:id', controller.news.detail)
+  router.post('/upload', controller.upload.upload)
 }

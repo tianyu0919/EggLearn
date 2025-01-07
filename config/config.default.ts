@@ -22,5 +22,27 @@ module.exports = (appInfo: EggAppConfig) => {
     },
   }
 
+  // * 上传图片
+  config.multipart = {
+    mode: 'file',
+    fileSize: '5mb',
+    whitelist: ['.jpg', '.png', '.jpeg', '.xlsx', '.xls'],
+  }
+
+  // * 跨域配置
+  config.cors = {
+    origin: '*',
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
+  }
+
+  // * 安全配置
+  config.security = {
+    csrf: {
+      enable: false,
+    },
+  }
+
   return config
 }
+
+exports.mu
