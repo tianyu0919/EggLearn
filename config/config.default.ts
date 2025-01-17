@@ -25,14 +25,16 @@ module.exports = (appInfo: EggAppConfig) => {
   // * 上传图片
   config.multipart = {
     mode: 'file',
-    fileSize: '5mb',
+    fileSize: '100mb',
     whitelist: ['.jpg', '.png', '.jpeg', '.xlsx', '.xls'],
   }
 
   // * 跨域配置
   config.cors = {
-    origin: '*',
+    origin: 'http://dev.hotelpms.test.sankuai.com:3000',
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
+    allowHeaders: 'Content-Type,Authorization,Hotelpms-Platform',
+    credentials: true,
   }
 
   // * 安全配置
@@ -42,7 +44,7 @@ module.exports = (appInfo: EggAppConfig) => {
     },
   }
 
+  config.middleware = ['cache', 'optionsHandler']
+
   return config
 }
-
-exports.mu
